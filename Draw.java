@@ -1,6 +1,11 @@
+import java.util.Arrays;
+
 /*
  * This class is a "converter" whose purpose is to format the used card in to what is called
  * "rank of suit" format (e.g "Ace of Spades", "2 of Hearts", "3 of Diamonds", etc...).
+ * The reason why suitConverter and rankConverter are separate methods instead of a consolidated one is 
+ * because for the gameplay, the winning card is based solely on the one with a higher rank. 
+ * Card suit is purely for enhancing the user's experience.
  * 
  */
 
@@ -10,10 +15,18 @@ public class Draw {
 
     Draw(){} // default constructor
 
-    public String converter(Integer cardDrawn){ // converts the card to "rank of suit" format
+    public String suitConverter(Integer cardDrawn){ // converts the card drawn into its corresponding suit
         String suitConversion = suits[cardDrawn / 13]; // this divides the argument by 13 and find the matching suit
+        return " of " + suitConversion; // returns string in " of suit" format
+    }
+
+    public String rankConverter(Integer cardDrawn){
         String rankConversion = ranks[cardDrawn % 13]; // this finds the remainder of the argument and finds the matching rank
-        return rankConversion + " of " + suitConversion; // returns string in "rank of suit" format
+        return rankConversion;
+    }
+
+    public int getRanks(String string){
+        return Arrays.asList(ranks).indexOf(string);
     }
     
 }
