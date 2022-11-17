@@ -1,5 +1,5 @@
 /*
- * This object contains the intial code from Revel.
+ * This class contains the intial code from Revel.
  * For the sake of maintaining clean code, Chris
  * committed the necessary changes to transform it into its own object
  */
@@ -9,8 +9,6 @@ import java.util.ArrayList;
 
 class Deck {
     private int[] deck = new int[52]; // 52 cards in the game
-    private String[] ranks = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"}; // this is used to assign the value (or rank) that each card has
-    private String[] suits = {"Spades", "Hearts", "Diamonds", "Clubs"}; // although not important for the actual logic, this enhances the user's experience
     
     
     private ArrayList<Integer> p1Cards = new ArrayList<Integer>();
@@ -63,9 +61,3 @@ class Deck {
 }
 
 
-// Display two cards -- this code might be useful for when players have to go to war
-// for (int i = 0; i < 2; i++) {
-//     String suit = suits[deck[i] / 13];
-//     String rank = ranks[deck[i] % 13];
-//     System.out.println("Card number " + deck[i] + ": " + rank + " of " + suit);
-// }

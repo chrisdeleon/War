@@ -1,5 +1,5 @@
 /*
- * this file is used to declare, get, and set each players' name
+ * This class is used to declare, get, and set each players' name
  */
 import java.util.ArrayList;
 
