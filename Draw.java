@@ -13,7 +13,6 @@ public class Draw {
     private String[] ranks = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"}; 
     private String[] suits = {"Spades", "Hearts", "Diamonds", "Clubs"};
 
-    Draw(){} // default constructor
 
     public String suitConverter(Integer cardDrawn){ // converts the card drawn into its corresponding suit
         String suitConversion = suits[cardDrawn / 13]; // this divides the argument by 13 and find the matching suit
@@ -25,7 +24,7 @@ public class Draw {
         return rankConversion;
     }
 
-    public int getRanks(String string){
+    public int getRanks(String string){ // gets the ranks array which is then used to determine who wins the round in the main method
         return Arrays.asList(ranks).indexOf(string);
     }
     

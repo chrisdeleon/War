@@ -1,6 +1,6 @@
 /*
  * This class contains the intial code from Revel.
- * For the sake of maintaining clean code, Chris
+ * For the sake of maintaining clean code, we
  * committed the necessary changes to transform it into its own object
  */
 
@@ -9,15 +9,9 @@ import java.util.ArrayList;
 
 class Deck {
     private int[] deck = new int[52]; // 52 cards in the game
+    private ArrayList<Integer> p1Cards = new ArrayList<Integer>(); // player one's deck
+    private ArrayList<Integer> p2Cards = new ArrayList<Integer>(); // player two's deck
     
-    
-    private ArrayList<Integer> p1Cards = new ArrayList<Integer>();
-    private ArrayList<Integer> p2Cards = new ArrayList<Integer>();
-    
-
-    
-
-    Deck(){} // default constructor
 
     public int[] deck(){ // returns the deck whether it has been shuffled and initialized or not 
         return deck;
